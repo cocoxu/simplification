@@ -1,4 +1,4 @@
-Authors: Wei Xu
+Authors: Wei Xu (www.cis.upenn.edu/~xwe/)
 
 Contact: xwe@cis.upenn.edu
 
