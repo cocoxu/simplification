@@ -23,6 +23,10 @@ Code, data and trained models from the following paper:
 
 **./SARI.py**   a Python implementation of the SARI metric for text simplification evaluation
 
+There is also a [Java implementation of SARI](https://github.com/apache/incubator-joshua/blob/master/src/main/java/org/apache/joshua/metrics/SARI.java) in the Joshua codebase. 
 
 ### The Text Simplificaiton System 
-The text simplification system is integrated as part of the [Joshua Decoder](http://joshua.incubator.apache.org/)
+
+The text simplification system in the paper was implemented in an earlier version of [Joshua Decoder](http://joshua.incubator.apache.org/). 
+
+We are working on integrating our text simplification system into the upcoming release of Joshua. 
