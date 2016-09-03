@@ -7,7 +7,7 @@ Code, data and trained models from the following paper:
      Wei Xu, Courtney Napoles, Ellie Pavlick, Quanze Chen and Chris Callison-Burch
      In Transactions of the Association for Computational Linguistics (TACL) 2015
 
-=== Data === 
+### Data 
 ./data/turkcorpus/     tuning and test data 
     *.norm       tokenized sentences from English Wikipedia
     *.simp       tokenized, corresponding sentences from Simple English Wikipedia
@@ -15,9 +15,9 @@ Code, data and trained models from the following paper:
     
 ./data/systemoutputs/  4 different system outputs compared in the paper
 
-=== Code ===
+### Code 
 SARI.py   a Python implementation of the SARI metric for text simplification evaluation
 
 
-=== The Text Simplificaiton System  ===
+### The Text Simplificaiton System 
 The text simplification system is integrated as part of the [Joshua Decoder](http://joshua.incubator.apache.org/)
