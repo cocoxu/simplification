@@ -26,6 +26,10 @@ Code, data and trained models from the following paper:
     
 **./data/systemoutputs/**  4 different system outputs compared in the paper
 
+**ppdb-1.0-xl-all-simp.gz** (a 3.8G [file](http://www.cis.upenn.edu/~xwe/files/ppdb-1.0-xl-all-simp.gz))  paraphrase rules (PPDB 1.0) with added simplification-specific features 
+
+**ppdb-1.0-xxxl-lexical-self-simp.gz** (a 27M [file](http://www.cis.upenn.edu/~xwe/files/ppdb-1.0-xxxl-lexical-self-simp.gz)) self-paraphrase lexical rules that map words to themselves, and help to copy input words into outputs
+
 ### Code 
 
 **./SARI.py**   a Python implementation of the SARI metric for text simplification evaluation
