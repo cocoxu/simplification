@@ -3,11 +3,18 @@ Contact: [Wei Xu](web.cse.ohio-state.edu/~weixu/) (Ohio State University)
 
 Code, data and trained models from the following paper:
 
-     "Optimizing Statistical Machine Translation for Text Simplification"
-     Wei Xu, Courtney Napoles, Ellie Pavlick, Quanze Chen and Chris Callison-Burch
-     In Transactions of the Association for Computational Linguistics (TACL) 2015
+     @article{Xu-EtAl:2016:TACL,
+     author = {Wei Xu and Courtney Napoles and Ellie Pavlick and Quanze Chen and Chris Callison-Burch},
+     title = {Optimizing Statistical Machine Translation for Text Simplification},
+     journal = {Transactions of the Association for Computational Linguistics},
+     volume = {4},
+     year = {2016},
+     url = {https://cocoxu.github.io/publications/tacl2016-smt-simplification.pdf},
+     pages = {401--415}
+     }
 
 ### Data 
+**./tacl2016-smt-simplification.pdf**    the paper
 
 **./data/turkcorpus/**     tuning and test data 
 
@@ -30,3 +37,4 @@ There is also a [Java implementation of SARI](https://github.com/apache/incubato
 The text simplification system in the paper was implemented in an earlier version of [Joshua Decoder](http://joshua.incubator.apache.org/). 
 
 We are working on integrating our text simplification system into the upcoming release of Joshua. 
+
