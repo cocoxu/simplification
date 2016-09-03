@@ -16,7 +16,7 @@ Code, data and trained models from the following paper:
 ./data/systemoutputs/  4 different system outputs compared in the paper
 
 ### Code 
-SARI.py   a Python implementation of the SARI metric for text simplification evaluation
+./SARI.py   a Python implementation of the SARI metric for text simplification evaluation
 
 
 ### The Text Simplificaiton System 
