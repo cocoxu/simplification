@@ -1,4 +1,4 @@
-Contact: Wei Xu (Ohio State University web.cse.ohio-state.edu/~weixu/)
+Contact: [Wei Xu](web.cse.ohio-state.edu/~weixu/) (Ohio State University)
 
 
 Code, data and trained models from the following paper:
