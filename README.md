@@ -40,7 +40,7 @@ There is also a [Java implementation of SARI](https://github.com/apache/incubato
 
 The text simplification system was implemented into the MT toolkit [Joshua Decoder](http://joshua.incubator.apache.org/). 
 
-**./ppdb-simplification-release-joshua5.0.tar.gz** The experiments in our TACL 2016 paper used the Joshua 5.0. Example scripts for training the simplification are under the directory **./bin/** . The **joshua_TACL2016.config** is also provided -- that is corresponding to the best system in our paper. You may find the [Joshua pipeline tutorial](http://joshua.incubator.apache.org/5.0/tutorial.html) useful.
+**./ppdb-simplification-release-joshua5.0.zip** The experiments in our TACL 2016 paper used the Joshua 5.0. Example scripts for training the simplification are under the directory **./bin/** . The **joshua_TACL2016.config** is also provided -- that is corresponding to the best system in our paper. You may find the [Joshua pipeline tutorial](http://joshua.incubator.apache.org/5.0/tutorial.html) useful.
 
 
 
