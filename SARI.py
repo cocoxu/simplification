@@ -104,7 +104,7 @@ def SARIngram(sgrams, cgrams, rgramslist, numref):
     addscore_recall = 0
     if len(addgramcounter) > 0:
     	addscore_precision = addtmpscore / len(addgramcounter)
-    if len(addgramcounter) > 0:
+    if len(addgramcounterall) > 0:
     	addscore_recall = addtmpscore / len(addgramcounterall)
     addscore = 0
     if addscore_precision > 0 or addscore_recall > 0:
