@@ -181,25 +181,28 @@ def SARIsent (ssent, csent, rsents) :
     avgkeepscore = sum([keep1score,keep2score,keep3score,keep4score])/4
     avgdelscore = sum([del1score,del2score,del3score,del4score])/4
     avgaddscore = sum([add1score,add2score,add3score,add4score])/4
-    finalscore = ( avgkeepscore + avgdelscore + avgaddscore ) / 3
+    finalscore = (avgkeepscore + avgdelscore + avgaddscore ) / 3
 
     return finalscore
 
 
+def main():
 
-fnamenorm   = "./turkcorpus/test.8turkers.tok.norm"
-fnamesimp   = "./turkcorpus/test.8turkers.tok.simp"
-fnameturk  = "./turkcorpus/test.8turkers.tok.turk."
-
-
-ssent = "About 95 species are currently accepted ."
-csent1 = "About 95 you now get in ."
-csent2 = "About 95 species are now agreed ."
-csent3 = "About 95 species are currently agreed ."
-rsents = ["About 95 species are currently known .", "About 95 species are now accepted .", "95 species are now accepted ."]
-
-print SARIsent(ssent, csent1, rsents)
-print SARIsent(ssent, csent2, rsents)
-print SARIsent(ssent, csent3, rsents)
+    fnamenorm   = "./turkcorpus/test.8turkers.tok.norm"
+    fnamesimp   = "./turkcorpus/test.8turkers.tok.simp"
+    fnameturk  = "./turkcorpus/test.8turkers.tok.turk."
 
 
+    ssent = "About 95 species are currently accepted ."
+    csent1 = "About 95 you now get in ."
+    csent2 = "About 95 species are now agreed ."
+    csent3 = "About 95 species are currently agreed ."
+    rsents = ["About 95 species are currently known .", "About 95 species are now accepted .", "95 species are now accepted ."]
+
+    print(SARIsent(ssent, csent1, rsents))
+    print(SARIsent(ssent, csent2, rsents))
+    print(SARIsent(ssent, csent3, rsents))
+
+
+if __name__ == '__main__':
+    main()  
