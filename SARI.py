@@ -32,8 +32,6 @@ def ReadInFile (filename):
 
 
 def SARIngram(sgrams, cgrams, rgramslist, numref):
-
-
     rgramsall = [rgram for rgrams in rgramslist for rgram in rgrams]
     rgramcounter = Counter(rgramsall)
 	
@@ -74,7 +72,6 @@ def SARIngram(sgrams, cgrams, rgramslist, numref):
     delgramcounter_rep = sgramcounter_rep - cgramcounter_rep
     delgramcountergood_rep = delgramcounter_rep - rgramcounter
     delgramcounterall_rep = sgramcounter_rep - rgramcounter
-
     deltmpscore1 = 0
     deltmpscore2 = 0
     for delgram in delgramcountergood_rep:
@@ -110,7 +107,6 @@ def SARIngram(sgrams, cgrams, rgramslist, numref):
     if addscore_precision > 0 or addscore_recall > 0:
         addscore = 2 * addscore_precision * addscore_recall / (addscore_precision + addscore_recall)
     
-
     return (keepscore, delscore_precision, addscore)
     
 
@@ -177,7 +173,6 @@ def SARIsent (ssent, csent, rsents) :
     (keep2score, del2score, add2score) = SARIngram(s2grams, c2grams, r2gramslist, numref)
     (keep3score, del3score, add3score) = SARIngram(s3grams, c3grams, r3gramslist, numref)
     (keep4score, del4score, add4score) = SARIngram(s4grams, c4grams, r4gramslist, numref)
-
     avgkeepscore = sum([keep1score,keep2score,keep3score,keep4score])/4
     avgdelscore = sum([del1score,del2score,del3score,del4score])/4
     avgaddscore = sum([add1score,add2score,add3score,add4score])/4
