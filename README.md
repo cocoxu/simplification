@@ -38,7 +38,7 @@ There is also a [Java implementation of SARI](https://github.com/apache/incubato
 
 ### Human Evaluation and Data Collection (Crowdsouring User Interface Design)
 
-**./HIT_MTurk_crowdsourcing**  HTML interfaces designed for human evaluation of simplification systems, as well as parallel corpus collection (originally used on Amazon Mechnical Turk)
+**./HIT_MTurk_crowdsourcing**  HTML interfaces designed for human evaluation of simplification systems, as well as parallel corpus collection (originally used on Amazon Mechnical Turk HITs)
 
 ### The Text Simplificaiton System 
 
