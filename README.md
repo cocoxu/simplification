@@ -36,7 +36,7 @@ Code, data and trained models from the following paper:
 
 There is also a [Java implementation of SARI](https://github.com/apache/incubator-joshua/blob/master/src/main/java/org/apache/joshua/metrics/SARI.java) that is integrated as part of the Joshua's codebase. 
 
-### Human Evaluation and Data Collection (Crowdsouring User Interface Design)
+### Crowdsouring User Interface Design (Human Evaluation and Data Collection)
 
 **./HIT_MTurk_crowdsourcing/**  HTML interfaces designed for human evaluation of simplification systems, as well as parallel corpus collection (originally used on Amazon Mechnical Turk HITs)
 
