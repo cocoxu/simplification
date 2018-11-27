@@ -1,0 +1,81 @@
+<p>
+<style type="text/css">.odd {background: #CCFFCC;}
+</style>
+</p>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<h1>Judge the quality of sentence rewriting that tries to&nbsp;use&nbsp;simpler words</h1>
+
+<p>Please read the groups of sentences below. Each group contains an original sentence along with some variations of it. These variations are produced by automatic sentence simplification systems, which aims to rewrite the original sentence using simpler words. Your job is to grade the quality of the variations by identifying the words/phrases that are altered, and counting how many of them are good simplifications(retaining the meaning also using the simpler words/phrases). Please focus on word choices and ignore the grammar errors or word deletions.</p>
+
+<p>Here is an example of how we graded a pair of sentences:</p>
+
+<table cellspacing="0">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+			<th colspan="3">Original sentence:</th>
+		</tr>
+		<tr>
+			<td colspan="3">they are culturally akin to the coastal peoples of papua new guinea .</td>
+		</tr>
+		<tr>
+			<th>Variation:</th>
+			<th>Number of Good Rewordings that Simplify</th>
+		</tr>
+		<tr>
+			<td>it &#39;s culture similar to the people of port of papua .</td>
+			<td align="center">2</td>
+		</tr>
+		<tr>
+			<td>they are culturally akin to the coastal peoples of png .</td>
+			<td align="center">0</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>We gave the first variation a &quot;2&quot; for rephrasing two words &quot;culturally akin&quot; into &quot;culture similar&quot;, which are correct in meaning and also using simpler words. We gave the second variation a &quot;0&quot; because &quot;png&quot; is right in meaning but not easier to read than it full form &quot;papua new guinea&quot;.</p>
+
+<p>Here is another example:</p>
+
+<table cellspacing="0">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+			<th colspan="3">Original sentence:</th>
+		</tr>
+		<tr>
+			<td colspan="3">on 16 june 2009 , the official release date of the resistance was announced on the band &#39;s website .</td>
+		</tr>
+		<tr>
+			<th>Variation:</th>
+			<th>Number of Good Rewordings that Simplify</th>
+		</tr>
+		<tr>
+			<td>on june 16 , 2009 , the band &#39;s website said that the album would be released on september 14 , 2009 .</td>
+			<td align="center">2</td>
+		</tr>
+		<tr>
+			<td>on 16 june 2009 , the official release date of the resistance was said on the band &#39;s web site .</td>
+			<td align="center">0</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>We gave the first variation a &quot;2&quot; for rephrasing &quot;announced&quot; into &quot;said&quot; and rephrasing a complex phrase &quot;the official release date&quot; to a more explanatory saying &quot;would be released&quot; (also can seen as a good change from passive voice to the simpler active voice). The reason we count phrase &quot;the official release date&quot; as 1 good (phrase) change other than 4 (word) changes is because it is a conceptually tight compound phrase; while &quot;culturally&quot; and &quot;akin&quot; are two important pieces of information in the first example above.</p>
+
+<p>We gave the second variation a &quot;0&quot; because the word &quot;said&quot; was not properly used in &quot;the release date ... was said&quot; (grammatical but awkward), and rewriting of &quot;website&quot; into &quot;web site&quot;, which is correct in meaning but does not make things simpler.</p>
+
+<p>Although this is a bit vague to make judgements, the rule of thumb is that your judgements should tell us which one from the given 6 variations is better (making good word/phrase substitutions, ignoring errors) than the other ones in the same HIT. Also, it is also rare for a sentence variation to have more than 4 good rewordings for simplification. So essentially, you will be choosing a number between 0 and 4 to tell us which system has made more rewritings that are correct.&nbsp;</p>
+
+<center><font size="-2"><u><b>Informed Consent Form</b></u></font></center>
+
+<p><font size="-2"><b>Purpose of research study:</b> We are collecting judgments about the quality of automatically generated text as part of our research into human language technologies.</font><br />
+<b style="font-size: x-small; line-height: 1.6em;">Benefits:</b><span style="font-size: x-small; line-height: 1.6em;"> Although it will not directly benefit you, this study may benefit society by improving how computers process human languages. This could lead to better translation software, improved web searching, or new user interfaces for computers and mobile devices.</span><br />
+<b style="font-size: x-small; line-height: 1.6em;">We may end your participation if</b><span style="font-size: x-small; line-height: 1.6em;"> you do not have adequate knowledge of the language, or you are not following the instructions, or your answers significantly deviate from known translations.<br />
+​</span><b style="font-size: x-small; line-height: 1.6em;">Clicking on the &ldquo;Accept HIT&rdquo; button</b><span style="font-size: x-small; line-height: 1.6em;"> indicates that you understand the information in this consent form. You have not waived any legal rights you otherwise would have as a participant in a research study.</span></p>
+
+<p>&nbsp;Please provide any comments that you have about this HIT. We appreciate your input!</p>
+
+<p><textarea cols="80" name="comment" rows="4"> </textarea>&nbsp;</p>

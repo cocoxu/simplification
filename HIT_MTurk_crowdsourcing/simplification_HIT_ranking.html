@@ -1,0 +1,182 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        font-size:16px;
+      }
+</style>
+<script type="text/javascript">
+window.addEventListener("load",function(){
+	$(".badge").on("click",function(e){
+		if($(this).hasClass("badge-warning")){
+			$(this).children('input').prop('checked', true);
+		}
+		$(".badge-info").each(function(){
+			$(this).removeClass("badge-info");
+			$(this).addClass("badge-warning");
+		});
+		$(".badge-warning").each(function(){
+			if($(this).children("input").is(":checked")){
+				$(this).removeClass("badge-warning");
+				$(this).addClass("badge-info");
+			}
+		});
+	});
+});
+</script>
+<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<div class="container">
+<div class="alert alert-info">
+  <h3>Instructions</h3>
+  <div style="background:#fff;color:#000;padding:5px;">
+  <p>For this task you are given <strong>one source sentence</strong> and <strong>four (4) simplifications of the sentence</strong>. Your job is to rank the simplifications on how well they simplify the wording of the original sentence.</p>
+  <ul>
+     <li>A good simplified sentence should use words, phrases and grammatical structures that are easy to understand and very straight forward. Think of it as a sentence written for a non-native speaker or student. <br><strong>Example: </strong><br>Original : They are culturally akin to the coastal people.<br>Simplified: Their culture is similar to the people of the coast. 
+
+     <br>&nbsp;</li>
+     <li>
+     You should also consider grammar when ranking sentences. A sentence that does not make sense will be worse than one that is not completely simplified.  
+     <br>&nbsp;</li>
+     <li>Better simplifications are ones that preserve as much as the original meaning as possible and don't omit details.<br> Example: <br>
+     Original : It was originally thought that the debris thrown up by the collision filled in the smaller craters .<br>
+     Good : Originally people thought that the small craters were filled in by the pieces thrown up by the crash.<br>
+     Bad : The craters were filled by thrown up dirt.<br>
+     <u>(Notice that in the bad example, there is significant information loss, "originally", "thought","smaller" and "collision" are not reflected at all)</u>
+
+     <br>&nbsp;</li>
+     <li>
+     If two sentences are the same or very similar (wording or complexity), you may mark them as a tie by giving them the same ranking. Please try your best to determine the ranking and only mark sentences as a tie when you really feel like you need to. <br>
+     Example: <br>
+     Simplification A: He went to the convention on January 13th, 1988<br>
+     Simplification B: He went to the convention on January 13-th, 1988<br>
+     <br>&nbsp;</li>
+     <li>
+     Only relative ranking matters outside of a tie. E.g. Ranking sentences as [1 1 3 4] is the same as ranking them [1 1 2 3] or [1 1 2 4]
+     <br>&nbsp;</li>
+  </ul>
+  <p>This task will be used to evaluate the results of human and machine simplifications by gathering multiple rankings. A sample of your results will be manually checked for accuracy among your peers so please take the time to understand the instructions and do the task carefully. </p>
+  <p>Have fun and Thank you!</p>
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
+
+<div class="span12">
+<blockquote><p><h2>${SOURCE_SENTENCE}</h2></p>
+<small>Source</small>
+</blockquote>
+<input type="hidden" name="SOURCE_ID" value="${S_ID}"/>
+</div>
+
+</div>
+
+<span id="translations">
+
+<div class="row">
+<div class="span11">
+<blockquote>
+
+
+<span class="badge badge-success" style="line-height:22px;">Best</span> &larr;
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 1 <input type="radio" name="rank_1" value="1" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 2 <input type="radio" name="rank_1" value="2" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 3 <input type="radio" name="rank_1" value="3" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 4 <input type="radio" name="rank_1" value="4" style="vertical-align:baseline;" /></span>
+
+&rarr; <span class="badge badge-important" style="line-height:22px;">Worst</span>
+
+
+<input type="hidden" name="T_1_LABEL" value="${TARGET_1_LABEL}"/>
+<p><strong>${TARGET_1}</strong></p>
+<small>Simplification 1</small>
+</blockquote>
+</div>
+</div>
+
+<div class="row">
+<div class="span11">
+<blockquote>
+
+
+<span class="badge badge-success" style="line-height:22px;">Best</span> &larr;
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 1 <input type="radio" name="rank_2" value="1" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 2 <input type="radio" name="rank_2" value="2" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 3 <input type="radio" name="rank_2" value="3" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 4 <input type="radio" name="rank_2" value="4" style="vertical-align:baseline;" /></span>
+
+&rarr; <span class="badge badge-important" style="line-height:22px;">Worst</span>
+
+<input type="hidden" name="T_2_LABEL" value="${TARGET_2_LABEL}"/>
+
+<p><strong>${TARGET_2}</strong></p>
+<small>Simplification 2</small>
+</blockquote>
+</div>
+</div>
+
+<div class="row">
+<div class="span11">
+<blockquote>
+
+
+<span class="badge badge-success" style="line-height:22px;">Best</span> &larr;
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 1 <input type="radio" name="rank_3" value="1" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 2 <input type="radio" name="rank_3" value="2" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 3 <input type="radio" name="rank_3" value="3" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 4 <input type="radio" name="rank_3" value="4" style="vertical-align:baseline;" /></span>
+
+&rarr; <span class="badge badge-important" style="line-height:22px;">Worst</span>
+
+
+<input type="hidden" name="T_3_LABEL" value="${TARGET_3_LABEL}"/>
+<p><strong>${TARGET_3}</strong></p>
+<small>Simplification 3</small>
+</blockquote>
+</div>
+</div>
+
+<div class="row">
+<div class="span11">
+<blockquote>
+
+
+<span class="badge badge-success" style="line-height:22px;">Best</span> &larr;
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 1 <input type="radio" name="rank_4" value="1" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 2 <input type="radio" name="rank_4" value="2" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 3 <input type="radio" name="rank_4" value="3" style="vertical-align:baseline;" /></span>
+
+<span class="badge badge-warning" style="line-height:22px;">Rank 4 <input type="radio" name="rank_4" value="4" style="vertical-align:baseline;" /></span>
+
+
+&rarr; <span class="badge badge-important" style="line-height:22px;">Worst</span>
+
+
+<input type="hidden" name="T_4_LABEL" value="${TARGET_4_LABEL}"/>
+<p><strong>${TARGET_4}</strong></p>
+<small>Simplification 4</small>
+</blockquote>
+</div>
+</div>
+
+</span>
+
+</div>
+</div> <!-- /container -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

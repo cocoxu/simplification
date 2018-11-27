@@ -1,0 +1,165 @@
+<p>
+<style type="text/css">.odd {background: #CCFFCC;}
+</style>
+</p>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<h1>Judge the quality of similar sentences</h1>
+
+<p>Please read the groups of sentences below. Each group contains an original sentence along with some variations of it. Your job is to grade the quality of the variations with two 4-point scales: <b>meaning</b> and <b>grammar</b>.&nbsp;</p>
+
+<p>Meaning</p>
+
+<ul>
+	<li><b>4 - identical</b>: All of the meaning of the original sentence is retained, and nothing is added or missing</li>
+	<li><b>3 - minor differences</b>: The meaning of the original sentence is retained, although some minor information may be altered,&nbsp;deleted or added without too great a difference in meaning</li>
+	<li><b>2 - moderate differences</b>: Some of the meaning of the original sentence is retained, although a non-trivial amount of information was deleted or added</li>
+	<li><b>1 - substantially different</b>: Substantial amount of the meaning is different</li>
+</ul>
+
+<p>Grammar</p>
+
+<ul>
+	<li><b>4 - </b><b style="line-height: 20.7999992370605px;">grammatical&nbsp;</b><b>(but can be awkward)</b>: The sentence is grammatical, but might sound slightly awkward</li>
+	<li><b>3 - one or two errors</b>: The sentence has one or two&nbsp;error (such as an agreement error between subject and verb, a plural noun with a singular determiner, or the wrong verb form)</li>
+	<li><b>2 - many errors</b>: The sentence has multiple errors or omits words that would be required to make it grammatical</li>
+	<li><b>1 - ungrammatical</b>: The sentence is totally ungrammatical</li>
+</ul>
+
+<p>Here is an example of how we graded a pair of sentences:</p>
+
+<table cellspacing="0">
+	<tbody>
+		<tr>
+		</tr>
+		<tr>
+			<th colspan="3">Original sentence:</th>
+		</tr>
+		<tr>
+			<td colspan="3">they are culturally akin to the coastal peoples of papua new guinea .</td>
+		</tr>
+		<tr>
+			<th>Variation:</th>
+			<th>Meaning</th>
+			<th>Grammar</th>
+		</tr>
+		<tr>
+			<td>it &#39;s culture similar to the people of port of papua .</td>
+			<td align="center">3</td>
+			<td align="center">4</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>We gave this variation a &quot;3&quot; for grammar because it is almost grammatical but uses word &quot;its&quot; instead &quot;it&#39;s&quot; by mistake. We gave it a &quot;2&quot; for meaning because some of the meaning of the original sentence is still there but a lot of the meaning is missing.</p>
+
+<center><font size="-2"><u><b>Informed Consent Form</b></u></font></center>
+
+<p><font size="-2"><b>Purpose of research study:</b> We are collecting judgments about the quality of automatically generated text as part of our research into human language technologies.</font><br />
+<b style="font-size: x-small; line-height: 1.6em;">Benefits:</b><span style="font-size: x-small; line-height: 1.6em;"> Although it will not directly benefit you, this study may benefit society by improving how computers process human languages. This could lead to better translation software, improved web searching, or new user interfaces for computers and mobile devices.</span><br />
+<b style="font-size: x-small; line-height: 1.6em;">We may end your participation if</b><span style="font-size: x-small; line-height: 1.6em;"> you do not have adequate knowledge of the language, or you are not following the instructions, or your answers significantly deviate from known translations.<br />
+​</span><b style="font-size: x-small; line-height: 1.6em;">Clicking on the &ldquo;Accept HIT&rdquo; button</b><span style="font-size: x-small; line-height: 1.6em;"> indicates that you understand the information in this consent form. You have not waived any legal rights you otherwise would have as a participant in a research study.</span></p>
+<script type="text/Javascript">
+
+function randOrd(){
+	return (Math.round(Math.random())-0.5); 
+}
+
+var source_sentences = [ 
+	"${source_0}" ]; 
+
+var simplifications = [ 
+	[
+	"${simplification_0_0}",
+	"${simplification_0_1}",
+	"${simplification_0_2}",
+	"${simplification_0_3}", 
+	"${simplification_0_4}"
+]
+]; 
+
+var order = new Array(simplifications.length);
+for( i = 0; i < simplifications[0].length; i++) {
+	order[i] = [i];
+} 
+
+function writeSentenceTables() {
+      for(i = 0; i <source_sentences.length; i++) {
+	       document.write('<p><table cellspacing="0" width="80%">');
+	       document.write('<tr colspan="3"><b>'+(i+1)+'. Original sentence:</b></tr>');
+	       document.write('<tr><td colspan="3">');
+	       document.write(source_sentences[i]);
+	       document.write('</td></tr>');
+	       document.write('<tr><th>Variations to judge:</th><th>Meaning</th><th>Grammar</th></tr>');
+	       order.sort( randOrd );
+	var count = 0
+	for(j=0; j < simplifications[i].length; j++) {
+	       var id = order[j];
+		if (simplifications[i][id] == 'xx') { }
+		else {
+		if (count % 2 == 0) {
+		       document.write('<tr class="even">');
+		} else {
+		       document.write('<tr class="odd">');
+		}			
+		count += 1;
+	       document.write('<td>');
+	       document.write(simplifications[i][id]);
+	       document.write('</td>');
+	       // Meaning drop down
+	       document.write('<td>');
+	       document.write('<select name ="meaning_' + i + '_'+id+'">');
+	       document.write('<option value ="blank"></option>');
+	       document.write('<option value ="4">[4]identical</option>');
+	       document.write('<option value ="3">[3]minor differences</option>');
+	       document.write('<option value ="2">[2]moderate differences</option>');
+	       document.write('<option value ="1">[1]substantially different</option>');
+	       document.write('</select>');
+	       document.write('</td>');
+	       // grammar drop down
+	       document.write('<td>');
+	       document.write('<select name ="grammar_' + i + '_'+id+'">');
+	       document.write('<option value ="blank"></option>');
+	       document.write('<option value ="4">[4]grammatical</option>');
+	       document.write('<option value ="3">[3]1 or 2 errors</option>');
+	       document.write('<option value ="2">[2]many errors</option>');
+	       document.write('<option value ="1">[1]ungrammatical</option>');
+	       document.write('</select>');
+	       document.write('</td>');
+	       document.write('</tr>');
+		}
+		}
+	       document.write('</table></p>');
+document.write('<br /><br />');
+      }
+}
+
+writeSentenceTables();
+$("tr:odd").addClass("odd");
+</script>
+
+<p>&nbsp;Please provide any comments that you have about this HIT. We appreciate your input!</p>
+
+<p><textarea cols="80" name="comment" rows="4"> </textarea>&nbsp;</p>
+
+<p><input name="userDisplayLanguage" type="hidden" /> <input name="browserInfo" type="hidden" /> <input name="ipAddress" type="hidden" /> <input name="country" type="hidden" /> <input name="city" type="hidden" /> <input name="region" type="hidden" /></p>
+<script language="Javascript" src="http://gd.geobytes.com/gd?after=-1&variables=GeobytesCountry,GeobytesCity,GeobytesRegion,GeobytesIpAddress">
+</script><script language="Javascript">
+<!--
+function getUserInfo() {
+	var userDisplayLanguage = navigator.language ? navigator.language : navigator.userDisplayLanguage;
+	var browserInfo = navigator.userAgent;
+	var country = sGeobytesCountry;
+	var city = sGeobytesCity;
+	var region = sGeobytesRegion;
+
+	document.mturk_form.userDisplayLanguage.value = userDisplayLanguage;
+	document.mturk_form.browserInfo.value = browserInfo;
+	document.mturk_form.country.value = country;
+	document.mturk_form.city.value = city;
+	document.mturk_form.region.value = region;
+}
+
+getUserInfo();
+
+// -->
+</script>

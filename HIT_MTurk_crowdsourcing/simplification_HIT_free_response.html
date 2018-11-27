@@ -1,0 +1,62 @@
+<!-- Bootstrap v3.0.3 -->
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+<section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">
+<div class="row col-xs-12 col-md-12"><!-- Instructions -->
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Instructions</strong></div>
+
+<div class="panel-body">
+<p>For this task, you are given <strong>three sentences</strong> from a set of sentences. <strong><u>Your task is to paraphrase them so that they use simpler English.</u></strong> This means you should reduce the number of difficult words or idioms, simplify complex phrasing and make the sentence more straight forward.</p>
+
+<p>Notes and Examples:</p>
+<ul>
+	<li>When paraphrasing, try to preserve as much of the original meaning as possible. 
+	<p><strong>Example:</strong><br>
+	Original:<i>From its inception, it was designated a duty-free port and vied with the neighboring Sultanate of Pattani for trade. </i> <br>
+	Good: <i>From the start, it was set to be a duty-free port to compete with the neighboring Sultanate of Pattani for trade. </i> <br>
+	Bad: <i>It was set to be a duty-free port to compete with the neighboring Sultanate for trade. </i> <br>
+	</p></li>
+	<li>Proper names (e.g. John, Microsoft, Apple) , geographical locations (e.g. Northern Europe, Sultanate of Pattani), specialized technical terms (e.g. polymorphism, electro-pneumatic) or any word you dont know should be left alone when possible.</li>
+	<li>You should use simpler concepts/words/phrases in your paraphrasing. This means your sentence may have more words than the original. <p><strong>Example:</strong><br>
+	Original: <i>He was formerly a musician.</i><br>
+	Simplified: <i>He used to be a musician.</i></li>
+	<li>If you cannot simplify a sentence further, you can submit the original sentence.</li>
+</ul>
+
+<p>Your work will be used to train a sentence simplification algorithm to help non-native English speakers. We will manually check a fraction of your answers and spammers will be rejected. Read the instructions and make sure you understand the task before beginning.</p>
+
+<p>Have fun!</p>
+</div>
+</div>
+<!-- End Instructions --><!-- Content Body -->
+
+<section>
+<fieldset><label>1. ${S_1}:</label>
+
+<input class="form-control" name="Q_1" size="120" type="text" />
+</fieldset>
+
+<fieldset><label>2. ${S_2}:</label>
+
+<input class="form-control" name="Q_2" size="120" type="text" />
+</fieldset>
+
+<fieldset><label>3. ${S_3}:</label>
+
+<input class="form-control" name="Q_3" size="120" type="text" />
+</fieldset>
+
+<fieldset><label>Feedback (Optional)</label>
+<textarea class="form-control" cols="120" name="feedback" rows="3"></textarea></fieldset>
+</section>
+<!-- End Content Body --></div>
+</section>
+<!-- close container -->
+<style type="text/css">fieldset {
+    padding: 10px;
+    background:#fbfbfb;
+    border-radius:5px;
+    margin-bottom:5px;
+}
+</style>
+
