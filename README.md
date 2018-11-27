@@ -22,7 +22,7 @@ Code, data and trained models from the following paper:
 
     *.simp       tokenized, corresponding sentences from Simple English Wikipedia
 
-    *.turk.0~7   8 reference simplifications by 8 different Amazon Mechanical Turkers 
+    *.turk.0~7   8 reference simplifications by different Amazon Mechanical Turkers 
     
 **./data/systemoutputs/**  4 different system outputs compared in the paper
 
