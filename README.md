@@ -44,6 +44,8 @@ and
 
 ### Code 
 
+EDIT: Alternative python implementations of SARI and STAR (corpus-level SARI) are available in the [EASSE text simplification evaluation library](https://github.com/feralvam/easse/), along with other simplification metrics.
+
 **./SARI.py**   a stand-alone Python implementation of the SARI metric for text simplification evaluation
 
 There is also a [Java implementation of SARI](https://github.com/apache/incubator-joshua/blob/master/src/main/java/org/apache/joshua/metrics/SARI.java) that is integrated as part of the Joshua's codebase. 
@@ -61,9 +63,3 @@ The text simplification system was implemented into the MT toolkit [Joshua Decod
 ### Preprocessing Scripts
 
 **./scripts_preprocessing/** The tokenizer and sentence spliter used for preprocessing. 
-
-
-
-
-
-
