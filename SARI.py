@@ -70,8 +70,8 @@ def SARIngram(sgrams, cgrams, rgramslist, numref):
 
     # DELETION
     delgramcounter_rep = sgramcounter_rep - cgramcounter_rep
-    delgramcountergood_rep = delgramcounter_rep - rgramcounter
     delgramcounterall_rep = sgramcounter_rep - rgramcounter
+    delgramcountergood_rep = delgramcounter_rep & rgramcounterall_rep
     deltmpscore1 = 0
     deltmpscore2 = 0
     for delgram in delgramcountergood_rep:
@@ -82,9 +82,11 @@ def SARIngram(sgrams, cgrams, rgramslist, numref):
     	delscore_precision = deltmpscore1 / len(delgramcounter_rep)
     delscore_recall = 0
     if len(delgramcounterall_rep) > 0:
-    	delscore_recall = deltmpscore1 / len(delgramcounterall_rep)
+        # Deletions recall is not actually used for SARI (only deletions precision)
+        delscore_recall = deltmpscore2 / len(delgramcounterall_rep)
     delscore = 0
     if delscore_precision > 0 or delscore_recall > 0:
+        # This F1 is not actually used for SARI (only deletions precision)
         delscore = 2 * delscore_precision * delscore_recall / (delscore_precision + delscore_recall)
 
 
